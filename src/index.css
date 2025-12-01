@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+
+/* ===== Custom animations ===== */
+
+@keyframes gradient-move {
+  0% {
+    transform: translate3d(-10px, 10px, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(10px, -10px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(-10px, 10px, 0) scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px 4px rgba(236, 72, 153, 0.15);
+  }
+}
+
+.bg-animated-blob {
+  animation: gradient-move 8s ease-in-out infinite;
+}
+
+.float-soft {
+  animation: float 4s ease-in-out infinite;
+}
+
+.pulse-soft {
+  animation: pulse-soft 2.8s ease-in-out infinite;
+}
